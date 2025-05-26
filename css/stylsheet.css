@@ -5,20 +5,25 @@
     margin: 0;
     font-family: 'Noto Serif', serif;
 }
-body {
-    background-color: white;
+main{
+    /*background-color: red;*/
+    min-height: 600px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-header {
 
-    height: 470px;
+header {
+    height: 600px;
     width: 65%;
     background-color: white;
-    box-shadow: 0px 0px 10px 0px;
+    box-shadow: 0 0 10px 0;
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 150px;
     position: relative;
+    overflow-y: scroll;
 }
 nav {
     width: 100%;
@@ -170,140 +175,7 @@ form .submit {
     letter-spacing: 2px;
     height: 50px;
 }
-/*alles voor de pagina work*/
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 410px;
-    background-color: white;
-}
-.block-1 {
-    height: 200px;
-    width: 200px;
-    background-color: white;
-    border: 2px solid none;
-    box-shadow: 0px 0px 5px 0px;
-    margin-left: 2.5vh;
-    margin-right: 2.5vh;
-    border-radius: 10%;
-    background-image: url(../img/computer-concept.png);
-}
-.overlay {
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-    transition: 5s ease;
-    border-radius: 10%;
-    background: black;
-}
-.text-block {
-    display: flex;
-    justify-content: center;
-    color: #00B9FF;
-    position: relative;
-    top: 90px;
-    font-size: 150%
-}
-.block-1:hover .text-block {
-    opacity: 1;
-}
-.block-1:hover .overlay {
-    opacity: 1;
-}
-.block-2:hover .overlay {
-    opacity: 1;
-}
-.block-3:hover .overlay {
-    opacity: 1;
-}
-.block-2 {
-    height: 200px;
-    width: 200px;
-    background-color: white;
-    border: 2px solid none;
-    box-shadow: 0px 0px 5px 0px;
-    margin-left: 2.5vh;
-    margin-right: 2.5vh;
-    border-radius: 10%;
-    background-image: url(../img/groepsproject.png);
-}
-.block-3 {
-    height: 200px;
-    width: 200px;
-    background-color: white;
-    border: 2px solid none;
-    box-shadow: 0px 0px 5px 0px;
-    margin-left: 2.5vh;
-    margin-right: 2.5vh;
-    border-radius: 10%;
-    background-image: url(../img/designs-bg.png)
-}
-.block-1:hover {
-    box-shadow: 0px 0px 30px 0px #00B9FF;
-    cursor: pointer
-}
-.block-2:hover {
-    box-shadow: 0px 0px 30px 0px #00B9FF;
-    cursor: pointer
-}
-.block-3:hover {
-    box-shadow: 0px 0px 30px 0px #00B9FF;
-    cursor: pointer;
-}
-.block-a {
-    border-style: none;
-    text-decoration: none;
-}
-.block-a:hover {
-    border: none;
-}
-/*header voor de work-paginas*/
-.header-work {
 
-    height: 470px;
-    width: 65%;
-    background-color: white;
-    box-shadow: 0px 0px 10px 0px;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 150px;
-    position: sticky;
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-}
-/*alles voor work-websites paginas*/
-.website-wrapper {
-    width: 100%;
-    height: 1000px;
-}
-.work-opdrachten-container {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    margin-left: 2.5%;
-
-}
-.work-opdrachten-container-2 {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    margin-left: 2.5%;
-}
-.website {
-    width: 50%;
-    margin-right: 2.5%;
-    margin-left: 2.5%
-}
-.website-link {
-    color: #00B9FF
-}
-.website-img {
-    width: 90%;
-    box-shadow: 0px 0px 5px 0px
-}
 @media only screen and (max-width: 1300px) {
     /*    alles voorde index pagina*/
     .foto-index {
@@ -338,23 +210,8 @@ form .submit {
         width: 200px;
     }
 }
-/* Alles voor de pagina-work-opdrachten */
-@media only screen and (max-width: 650px) {
-    .work-opdrachten-container {
-        display: inherit;
-        margin-top: 0px;
-        width: 95%;
-    }
-    .work-opdrachten-container-2 {
-        display: inherit;
-        margin-top: 0px;
-        width: 95%;
-    }
-    .website {
-        width: 100%;
-        margin-top: 50px;
-    }
-}
+
+
 @media only screen and (max-width: 1100px) {
 
     .content {
@@ -383,16 +240,19 @@ form .submit {
     /*    hier komen de regels voor de kleinere versie */
 
     /*Index pagina*/
-    figure {
-        display: none;
+
+    main{
+        align-items: flex-start;
     }
+
     header {
         height: 90vh;
         width: 100%;
         background-color: white;
         box-shadow: none;
-        margin-top: 0px;
+        margin-top: 0;
         position: absolute;
+        overflow-y: revert ;
     }
     .header-work {
         height: 90vh;
@@ -431,13 +291,7 @@ form .submit {
         background-size: contain;
         background-repeat: no-repeat;
     }
-    /*    alles voor de work pagina*/
-    .content {
-        display: inherit;
-        overflow: inherit;
-        background-color: white;
-        margin-top: 50px;
-    }
+
     /*    alles voor about page*/
     .about-tekst {
         height: auto;
@@ -453,10 +307,6 @@ form .submit {
     }
     .foto-about {
         margin-top: 75px
-    }
-    /*    weet niet voor wat het is*/
-    .content {
-        height: 500px
     }
 }
 
