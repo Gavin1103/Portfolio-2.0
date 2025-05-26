@@ -1,3 +1,22 @@
+<?php
+
+if(isset($_POST["submit"])){
+    $name = $_POST["name"];
+    $subject = $_POST["onderwerp"];
+    $emailFrom = $_POST["email"];
+    $message = $_POST["message"];
+    
+    $mailTo = "533187@student.glu.nl";
+    $headers = "From: ".$emailFrom;
+    $txt = "You have recieved an Email from ".$name.".\n\n".$message;
+
+    mail($mailTo, $subject. $txt, $headers);
+
+    header("Location: contact.php?mailsend");
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -32,24 +51,21 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-
-
             <div class="contact-title">
                 <h2>Contact me</h2>
                 <h5>for questions</h5>
             </div>
-
-            
             <div class="contact">
-                <form id="contact-form" method="post" action="contact-form-handler.php">
+                <form id="contact-form" method="POST" action="contact.php">
                     <input    name="name"  type="text" class="form-control" placeholder="Your Name" required>
                     <br>
                     <input    name="email" type="text" class="form-control" placeholder="Your E-mail" required>
                     <br>
+                    <input    name="onderwerp" type="text" class="form-control" placeholder="Onderwerp" required>
+                    <br>
                     <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea>
                     <br>
-                    <!-- <input    name="submit" type="submit" class="form-control submit" value="SEND MESSAGE"> -->
-                    <button   name="" type="submit" class="form-control submit" value="SEND MESSAGE">SEND MESSAGE</button>
+                    <button name="submit" type="submit" class="form-control submit" value="SEND MESSAGE">SEND MESSAGE</button>
                 </form>
             </div>
         </header>
@@ -57,7 +73,6 @@
         </figure>
         <figure class="bol-2">
         </figure>
-
     </main>
 </body>
 
