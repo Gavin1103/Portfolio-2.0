@@ -1,9 +1,72 @@
 [
   {
-    "title": "Visie op de uitslag",
-    "description": "Voor school moesten wij een website maken waar je de uitslag van de verkiezingen kon zien",
-    "image": "project1.jpg",
-    "url": "project1.jpg",
+    "title": "VR-Balance (website)",
+    "description": "Dit is een CMS systeem voor het project VR-Balance",
+    "image": "vr-balance.png",
+    "url": "https://vrbalance.up.railway.app/",
     "git": ""
+  },
+  {
+    "title": "VR-Balance (API)",
+    "description": "De API voor de VR-Balance.",
+    "image": "vr-balance-api.png",
+    "url": "https://vrbalance-api.up.railway.app/swagger-ui/index.html#/",
+    "git": ""
+  },
+  {
+    "title": "Visie op de uitslag (website)",
+    "description": "Voor school moesten wij een website maken waar je de uitslag van de verkiezingen kon zien",
+    "image": "elections.png",
+    "url": "",
+    "git": "https://github.com/Gavin1103/Visie-op-de-uitslag/tree/main/frontend"
+  },
+  {
+    "title": "Visie op de uitslag (API)",
+    "description": "De API voor visie op de uitslag",
+    "image": "elections-api.png",
+    "url": "",
+    "git": "https://github.com/Gavin1103/Visie-op-de-uitslag/tree/main/backend"
+  },
+  {
+    "title": "Webshop (website)",
+    "description": "Dit is een webshop die ik samen met mijn klasgenoten heb gemaakt",
+    "image": "webshop.png",
+    "url": "",
+    "git": "https://github.com/Gavin1103/Webshop/tree/main/project/frontend"
+  },
+  {
+    "title": "Webshop (API)",
+    "description": "De API voor de websop",
+    "image": "webshop-api.png",
+    "url": "",
+    "git": "https://github.com/Gavin1103/Webshop/tree/main/project/backend"
+  },
+  {
+    "title": "Tests",
+    "description": "Unit tests, E2E tests en Integration tests",
+    "image": "test.jpg",
+    "url": "",
+    "git": ""
+  },
+  {
+    "title": "Dokkie",
+    "description": "Dit is een applicatie waar je kosten van elkaar kunt berekenen",
+    "image": "dokkie.png",
+    "url": "",
+    "git": "https://github.com/Gavin1103/Dokkie"
+  },
+  {
+    "title": "Code exchange",
+    "description": "Dit is een applicatie waar je vragen aan elkaar kunt stellen over code",
+    "image": "code-exchange.png",
+    "url": "",
+    "git": "https://github.com/Gavin1103/code_exchange"
+  },
+  {
+    "title": "Rekenmachine",
+    "description": "Een rekenmachine gemaakt met javascript",
+    "image": "calculator.png",
+    "url": "",
+    "git": "https://github.com/Gavin1103/Javascript/tree/main/p1/opdracht%203%20rekenmachine"
   }
 ]

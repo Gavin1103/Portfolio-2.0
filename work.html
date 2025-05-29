@@ -36,19 +36,112 @@
                     <button class="cv-button">Download CV</button>
                 </div>
 
-                <div class="project-container">
-                    <div class="project-item"></div>
-                    <div class="project-item"></div>
-                    <div class="project-item"></div>
-                    <div class="project-item"></div>
-                    <div class="project-item"></div>
-                    <div class="project-item"></div>
-                    <div class="project-item"></div>
+                <div class="project-container" id="projectContainer">
+
                 </div>
             </div>
         </section>
 
     </header>
 </main>
+
+<script>
+    fetch('projects/projects.json')
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById('projectContainer');
+
+            data.forEach(project => {
+                const item = document.createElement('div');
+                item.classList.add('project-item');
+
+                item.innerHTML = `
+        <div class="project-image">
+          <img class="image" src="img/${project.image || 'placeholder.png'}" alt="${project.title}"/>
+        </div>
+
+        <div class="project-title">
+          <h3>${project.title}</h3>
+        </div>
+
+        <div class="project-description">
+          <p>${project.description}</p>
+        </div>
+
+        <div class="project-icon-container">
+          ${project.url ? `<a href="${project.url}" target="_blank"><img class="icon" src="icons/link.png" alt="url-icon"></a>` : ''}
+          ${project.git ? `<a href="${project.git}" target="_blank"><img class="icon" src="icons/git.png" alt="github-icon"></a>` : ''}
+          <a href="#"><img class="icon info-icon" src="icons/info.png" alt="info-icon"></a>
+        </div>
+      `;
+
+                container.appendChild(item);
+            });
+
+            // Info-icon hover gedrag activeren ná toevoegen van items
+            const icons = document.querySelectorAll('.info-icon');
+            icons.forEach(icon => {
+                const projectItem = icon.closest('.project-item');
+                const description = projectItem.querySelector('.project-description');
+
+                icon.addEventListener('mouseenter', () => {
+                    description.style.opacity = '1';
+                });
+
+                icon.addEventListener('mouseleave', () => {
+                    description.style.opacity = '0';
+                });
+            });
+        });
+</script>
+
+
+
+<!--<script>-->
+<!--    const icons = document.querySelectorAll('.info-icon');-->
+
+<!--    icons.forEach(icon => {-->
+<!--        const projectItem = icon.closest('.project-item');-->
+<!--        const description = projectItem.querySelector('.project-description');-->
+
+<!--        icon.addEventListener('mouseenter', () => {-->
+<!--            description.style.opacity = '1';-->
+<!--        });-->
+
+<!--        icon.addEventListener('mouseleave', () => {-->
+<!--            description.style.opacity = '0';-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+
 </body>
 </html>
+
+<!--                    <div class="project-item">-->
+<!--                        <div class="project-image">-->
+<!--                            <img class="image" src="img/calculator.png" alt="rekenmachine"/>-->
+<!--                        </div>-->
+
+<!--                        <div class="project-title">-->
+<!--                            <h3>Rekenmachine</h3>-->
+<!--                        </div>-->
+
+<!--                        <div class="project-description">-->
+<!--                            <p>Voor school moesten wij een website maken waar je de uitslag van de verkiezingen kon-->
+<!--                                zien</p>-->
+<!--                        </div>-->
+
+
+<!--                        <div class="project-icon-container">-->
+<!--                            <a href="#"> <img class="icon" src="icons/link.png" alt="url-icon"></a>-->
+<!--                            <a href="#"> <img class="icon" src="icons/git.png" alt="github-icon"></a>-->
+<!--                            <a href="#"> <img class="icon info-icon" src="icons/info.png" alt="info-icon"></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <div class="project-item"></div>-->
+<!--                    <div class="project-item"></div>-->
+<!--                    <div class="project-item"></div>-->
+<!--                    <div class="project-item"></div>-->
+<!--                    <div class="project-item"></div>-->
+<!--                    <div class="project-item"></div>-->
