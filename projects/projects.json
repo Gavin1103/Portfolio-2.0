@@ -17,14 +17,14 @@
     "title": "Visie op de uitslag (website)",
     "description": "Voor school moesten wij een website maken waar je de uitslag van de verkiezingen kon zien",
     "image": "elections.png",
-    "url": "",
+    "url": "https://visie-op-de-uitslag.up.railway.app/",
     "git": "https://github.com/Gavin1103/Visie-op-de-uitslag/tree/main/frontend"
   },
   {
     "title": "Visie op de uitslag (API)",
     "description": "De API voor visie op de uitslag",
     "image": "elections-api.png",
-    "url": "",
+    "url": "https://visie-op-de-uitslag-api.up.railway.app/api/swagger-ui/index.html#/",
     "git": "https://github.com/Gavin1103/Visie-op-de-uitslag/tree/main/backend"
   },
   {

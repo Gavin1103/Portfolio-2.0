@@ -55,16 +55,16 @@ nav a {
 .portfolio {
     margin-left: 2%;
     font-family: 'Pacifico', cursive;
-
 }
+
 .index-text {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     height: 420px;
     align-items: center;
-
 }
+
 section {
     height: auto;
     width: 50%;
@@ -72,10 +72,12 @@ section {
 section h1 {
     font-size: 250%;
 }
+
 section a {
     color: #00B9FF;
     text-decoration: none
 }
+
 .bol-1 {
     height: 250px;
     width: 250px;
@@ -84,6 +86,7 @@ section a {
     border-radius: 50%;
     margin-left: 9%;
 }
+
 .bol-2 {
     height: 250px;
     width: 250px;
@@ -93,6 +96,7 @@ section a {
     margin-top: -700px;
     margin-right: 9%
 }
+
 .foto-index {
     width: 50%;
     height: 420px;
@@ -102,6 +106,7 @@ section a {
     position: absolute;
     margin-left: 5%
 }
+
 .foto-echt {
     height: 250px;
     width: 250px;
@@ -113,6 +118,7 @@ section a {
     justify-content: center;
     align-items: center
 }
+
 /*alles voor de pagina About*/
 .about-wrapper {
     display: flex;
@@ -120,6 +126,7 @@ section a {
     justify-content: flex-end;
     margin-right: 7.5%
 }
+
 .about-tekst {
     height: 300px;
     width: 20%;
@@ -127,6 +134,7 @@ section a {
     text-align: left;
     margin-right: 2%;
 }
+
 .foto-about {
     width: 50%;
     height: 420px;
@@ -141,6 +149,7 @@ section a {
     text-align: center;
     margin-top: 40px;
 }
+
 .contact-title h2 {
     width: 30%;
     border-bottom: 1.5px solid #00B9FF;
@@ -149,13 +158,16 @@ section a {
     margin-right: auto;
     margin-left: auto
 }
+
 .contact {
     text-align: center;
 }
+
 form {
     margin-top: 20px;
     transition: all 0.5s ease-in-out;
 }
+
 .form-control {
     background: transparent;
     border: none;
